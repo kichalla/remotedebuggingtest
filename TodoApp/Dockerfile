@@ -6,16 +6,16 @@ ENV ASPNETCORE_URLS=http://*:$PORT/
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src/TodoApp
-COPY TodoApp/TodoApp.csproj .
+COPY TodoApp.csproj .
 RUN dotnet restore
 COPY . .
 RUN dotnet publish -c Debug -o /app
 
 FROM base AS final
 WORKDIR /app
-COPY --from=build /app .
-COPY TodoApp/StartSSHAndApp.sh .
+COPY StartSSHAndApp.sh .
 RUN chmod +x ./StartSSHAndApp.sh
+COPY --from=build /app .
 #ENTRYPOINT ["dotnet", "TodoApp.dll"]
 
 CMD /app/StartSSHAndApp.sh

@@ -9,7 +9,7 @@ echo
 echo
 echo Building the app...
 cd ../TodoApp
-docker build -t todoapp -f TodoApp/Dockerfile .
+docker build -t todoapp .
 
 echo
 echo
