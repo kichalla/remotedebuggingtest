@@ -18,6 +18,7 @@
 x64/
 x86/
 bld/
+[Bb]in/
 [Oo]bj/
 [Ll]og/
 
@@ -41,6 +42,7 @@ dlldata.c
 
 # DNX
 project.lock.json
+project.fragment.lock.json
 artifacts/
 
 *_i.c
@@ -141,7 +143,7 @@ publish/
 *.azurePubxml
 # TODO: Comment the next line if you want to checkin your web deploy settings
 # but database connection strings (with potential passwords) will be unencrypted
-*.pubxml
+#*.pubxml
 *.publishproj
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
@@ -187,6 +189,7 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
+*.jfm
 *.pfx
 *.publishsettings
 node_modules/
@@ -250,30 +253,9 @@ paket-files/
 .idea/
 *.sln.iml
 
-# Visual Studio Code
-.vscode/launch.json
-.vscode/tasks.json
+# CodeRush
+.cr/
 
-# launchSettings.json
-launchSettings.json
-
-# Node and .NET Core runtime images dockerfiles, that are auto generated
-images/runtime/node/*.*/
-!images/runtime/node/4.*/
-!images/runtime/node/6.*/
-!images/runtime/node/8.0/
-!images/runtime/node/8.1/
-!images/runtime/node/8.2/
-!images/runtime/node/8.8/
-!images/runtime/node/8.9/
-images/runtime/dotnetcore/*.*/
-images/runtime/python/*.*/
-images/runtime/php/*.*/
-
-# Go packages, if Oryx is added to GOPATH (which it should)
-pkg/
-
-# Go packages from GitHub
-src/github.com/
-src/startupscriptgenerator/vendor/
-src/golang.org/
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
